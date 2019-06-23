@@ -7,6 +7,7 @@ class ExamCreationFilterChain
     public function __construct()
     {
         $this->filters = array();
+    }
 
     public function execute(array $data)
     {
