@@ -11,7 +11,6 @@ class ExamCreationFilterChain
 
     public function execute(array $data)
     {
-        $this->assertDataPresent($data);
         foreach ($this->filters as $filter) {
             if($filter->canHandle($data['type'])){
                 $exam = $filter->handle($data);
