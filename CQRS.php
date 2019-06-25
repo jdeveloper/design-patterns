@@ -7,9 +7,7 @@ interface Event
 class Monedero
 {
     protected id;
-
     protected $saldo = 0;
-
     protected $events = [];
 
     public function compraOpocoins($opocoins)
