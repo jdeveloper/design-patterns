@@ -15,7 +15,7 @@ interface PersonBuilderInterface
     public function getResult();
 }
 
-class EmployedMaleBuilder implements PersonBuilderInterface
+class EmployedFealeBuilder implements PersonBuilderInterface
 {
     private $person;
  
@@ -26,7 +26,7 @@ class EmployedMaleBuilder implements PersonBuilderInterface
  
     public function setGender()
     {
-        $this->person->gender = Person::GENDER_MALE;
+        $this->person->gender = Person::GENDER_FEMALE;
     }
  
     public function setEmployed()
@@ -78,17 +78,17 @@ class PersonDirector
 }
 
 $director                = new PersonDirector();
-$employedMaleBuilder     = new EmployedMaleBuilder();
+$employedFemaleBuilder     = new EmployedFe,aleBuilder();
 $unemployedMaleBuilder   = new UnemployedMaleBuilder();
  
 /**
  * object(Person)#3 (2) {
  * (
  *   ["employed"] => bool(true)
- *   ["gender"] => string(4) "Male"
+ *   ["gender"] => string(4) "Female"
  * )
  */
-$employedMale     = $director->build($employedMaleBuilder);
+$employedFemale     = $director->build($employedFemaleBuilder);
  
 /**
  * object(Person)#5 (2) {
