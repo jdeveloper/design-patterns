@@ -15,7 +15,7 @@ interface PersonBuilderInterface
     public function getResult();
 }
 
-class EmployedFealeBuilder implements PersonBuilderInterface
+class EmployedFemaleBuilder implements PersonBuilderInterface
 {
     private $person;
  
@@ -78,7 +78,7 @@ class PersonDirector
 }
 
 $director                = new PersonDirector();
-$employedFemaleBuilder     = new EmployedFe,aleBuilder();
+$employedFemaleBuilder     = new EmployedFemaleBuilder();
 $unemployedMaleBuilder   = new UnemployedMaleBuilder();
  
 /**
